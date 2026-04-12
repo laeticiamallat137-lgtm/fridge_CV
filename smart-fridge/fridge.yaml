@@ -1,0 +1,6 @@
+path: ./data
+train: train/images
+val: val/images
+test: test/images
+nc: 15
+names: [apple, banana, orange, pear, tomato, carrot, broccoli, bell_pepper, cabbage, egg, milk, yogurt, cheese, water_bottle, juice]

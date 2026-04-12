@@ -1,0 +1,8 @@
+best.pt
+*.pt
+runs/
+data/
+*.zip
+__pycache__/
+.DS_Store
+*.pyc
