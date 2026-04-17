@@ -6,3 +6,13 @@ __pycache__/
 .DS_Store
 *.pyc
 *.jfif
+
+
+models
+
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+smart-fridge/venv/
