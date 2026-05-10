@@ -10,10 +10,16 @@ Usage:
 """
 
 import argparse
+import os
+from pathlib import Path
+
 from ultralytics import YOLO
 
 # ── Config ────────────────────────────────────────────────────────────────────
-MODEL_PATH  = "../best.pt"    # path to your trained model
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_PATH = Path(os.environ.get("SMART_FRIDGE_MODEL", BASE_DIR / "best.pt"))
+if not MODEL_PATH.exists():
+    MODEL_PATH = BASE_DIR / "fine_tuned.pt"
 CONF_THRESH = 0.25            # confidence threshold (0.25 is YOLO default)
 IOU_THRESH  = 0.35            # NMS IoU threshold (lowered to catch overlapping items)
 IMAGE_SIZE  = 640             # must match training image size
